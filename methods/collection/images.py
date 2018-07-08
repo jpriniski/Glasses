@@ -12,7 +12,7 @@ import urllib.request
 #NOTE: save_jpeg is optimized to work with Twitter jpeg URLS.  Therefore, setting high_res = False could lead to errors. 
 def save_jpeg(url, file, high_res = True):
 
-  #To get a higher resolution profile image, we will remove '_noraml' from the url if
+  #To get a higher resolution profile image, we will remove '_noraml' from the url. NOTE: This only works for Twitter urls.
   if high_res is True:
     url = url.replace('_normal','') 
 	
